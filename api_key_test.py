@@ -19,6 +19,6 @@ def hash_string(params: dict, secret_key: str):
     return validating_secret
 
 
-p = {"ts": int(datetime.utcnow().timestamp()), "access_key": "kstVPalSWl3xllafbipurWES"}
+p = {"ts": int(datetime.utcnow().timestamp()), "access_key": "3BU9iFmRSZu93at9ZeX86fMd"}
 print(p)
-print(hash_string(p, "Misj0fdDVHy8Au0V7qW32rMXLndZSiFV"))
+print(hash_string(p, "OPPMQle42N5Uxb2V5UR85n1sxriHjMQ0"))

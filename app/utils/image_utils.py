@@ -77,7 +77,7 @@ def s3_upload(image, image_group_uuid, file_name):
         Bucket=conf.AWS_BUCKET_NAME,
         Key=f"{image_group_uuid}/{file_name}",
         Body=buffered.getvalue(),
-        ACL="public-read",
+        # ACL="public-read",
         ContentType="image/webp",
     )
     return f"https://{conf.AWS_BUCKET_NAME}.s3.{conf.AWS_REGION}.amazonaws.com/{image_group_uuid}/{file_name}"

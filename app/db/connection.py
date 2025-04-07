@@ -9,17 +9,13 @@ def _database_exist(engine, schema_name):
         result = result_proxy.scalar()
         return bool(result)
 
-
 def _drop_database(engine, schema_name):
     with engine.connect() as conn:
         conn.execute(f"DROP DATABASE {schema_name};")
 
-
 def _create_database(engine, schema_name):
     with engine.connect() as conn:
         conn.execute(f"CREATE DATABASE {schema_name} CHARACTER SET utf8mb4 COLLATE utf8mb4_bin;")
-
-
 
 class DBConnection:
     def __init__(self):
@@ -74,6 +70,5 @@ class DBConnection:
     @property
     def engine(self):
         return self._engine
-
 
 db = DBConnection()

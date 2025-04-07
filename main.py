@@ -30,7 +30,6 @@ def start_app():
 
     return app
 
-
 app = start_app()
 
 if __name__ == "__main__":
